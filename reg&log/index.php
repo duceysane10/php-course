@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en" dir="ltr">
-  <head>
+  <>
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="./PHP_COURSE/reg&log/style.css">
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
    </head>
 <body>
+    <?php require_once('app.php');?>
+    <?php if (isset($_SESSION['message'])):?>
+    <div class="container">
+    <div class="row">
+    <div class ="alert alert-<?=$_SESSION['msg_type']; ?>">
+    <?php echo $_SESSION['message'];
+    unset($_SESSION['message']);
+    ?>
+    </div>
+     <?php endif;?>
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -68,8 +81,8 @@
               </div>
               
             <div class="gender-details">
-                <input type="radio" name="male" id="dot-1">
-                <input type="radio" name="female" id="dot-2">
+                <input type="radio" name = "gender" VALUES="m" id="dot-1">
+                <input type="radio" name = "gender" VALUES="f" id="dot-2">
                 <span class="gender-title">Gender</span>
 
                 <div class="category">
