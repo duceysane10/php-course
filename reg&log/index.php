@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en" dir="ltr">
-  <>
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="./PHP_COURSE/reg&log/style.css">
@@ -45,15 +44,15 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <form action="app.php" method="POST">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" name ="email" required>
+                <input type="text" placeholder="Enter your email" name ="email1" id="email1" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" name ="pass" required>
+                <input type="password" placeholder="Enter your password" name ="pass1" id="pass1" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
@@ -96,8 +95,6 @@
                     </label>
                 </div>
             </div>
-              
-              
               <div class="button input-box">
                 <input type="submit" value="Register" name ="save">
               </div>
