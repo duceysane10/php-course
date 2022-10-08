@@ -17,6 +17,7 @@ if (isset($_POST['save'])){
   $_SESSION['msg_type']="success";
   header("location: index.php");
 }
+<<<<<<< HEAD
 if(isset($_POST['log'])) {
   if ( !isset($_POST['email1'], $_POST['pass1']) ) {
     // Could not get the data that should have been sent.
@@ -59,3 +60,5 @@ if ($stmt = $conn->prepare('SELECT id, password FROM data WHERE email = ?')) {
 	$stmt->close();
 }
 }
+=======
+>>>>>>> 73a13fe ( compleate log and reg)

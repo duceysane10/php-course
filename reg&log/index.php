@@ -12,7 +12,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
    </head>
 <body>
+<<<<<<< HEAD
     <?php require_once('app.php');?>
+=======
+    <?php require_once('config.php');?>
+    <?php include('reg.php');?>
+>>>>>>> 73a13fe ( compleate log and reg)
     <?php if (isset($_SESSION['message'])):?>
     <div class="container">
     <div class="row">
@@ -44,7 +49,11 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
+<<<<<<< HEAD
           <form action="app.php" method="POST">
+=======
+          <form action="login.php" method="POST">
+>>>>>>> 73a13fe ( compleate log and reg)
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
@@ -52,11 +61,20 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
+<<<<<<< HEAD
                 <input type="password" placeholder="Enter your password" name ="pass1" id="pass1" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Login" name ="log">
+=======
+                <input type="password" placeholder="Enter your password" name ="pass1" id="id_password" required id="myInput"><br/><br/>
+                <i class="far fa-eye" id="togglePassword" style="margin-left: 400px;  color: #000;;cursor: pointer;"></i>
+              </div>
+              
+              <div class="button input-box">
+                <input type="submit" value="Login" name ="login">
+>>>>>>> 73a13fe ( compleate log and reg)
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
@@ -64,7 +82,12 @@
       </div>
         <div class="signup-form">
           <div class="title">Signup</div>
+<<<<<<< HEAD
         <form action="app.php" method="POST">
+=======
+        <form action="reg.php" method="POST">
+          
+>>>>>>> 73a13fe ( compleate log and reg)
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
@@ -105,5 +128,20 @@
     </div>
     </div>
   </div>
+<<<<<<< HEAD
+=======
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+  </script>
+>>>>>>> 73a13fe ( compleate log and reg)
 </body>
 </html>
