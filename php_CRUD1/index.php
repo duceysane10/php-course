@@ -51,7 +51,6 @@
 </div>
 </div>
 
-
 <?php 
     $mysqli = new mysqli('localhost','root','','CRUD') or die(mysqli_error($mysqli));
     $result = $mysqli->query('SELECT * FROM Data') or die($mysqli->mysqli_error);
